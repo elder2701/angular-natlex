@@ -1,0 +1,25 @@
+h2 {
+  margin: 0;
+}
+
+.wrapper {
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  margin: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  align-items: center;
+
+}
+
+.btn {
+  margin-left: 20px;
+}
+
+.dashboard-chart {
+  max-width: 1400px;
+  margin: 0 auto 15px auto;
+}

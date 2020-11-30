@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .chart-controls {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .chart-date-range {
+    order: 1;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+}

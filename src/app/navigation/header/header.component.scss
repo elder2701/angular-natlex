@@ -1,0 +1,17 @@
+.header-menu-list {
+  display: flex;
+}
+
+.header-menu-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+ a {
+  text-decoration: none;
+  color: white;
+}

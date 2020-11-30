@@ -1,0 +1,38 @@
+<div mat-dialog-title>Create Chart</div>
+<div mat-dialog-content>
+  <label class="form-radio-label">Select sensor:</label>
+  <mat-radio-group class="form-radio" [(ngModel)]="name">
+    <mat-radio-button class="form-radio-input" value="temperature"
+      >Temperature</mat-radio-button
+    >
+    <mat-radio-button class="form-radio-input" value="humidity"
+      >Humidity</mat-radio-button
+    >
+    <mat-radio-button class="form-radio-input" value="light"
+      >Light</mat-radio-button
+    >
+  </mat-radio-group>
+  <mat-form-field>
+    <mat-label>Count sensors</mat-label>
+    <input
+      matInput
+      max="1"
+      min="4"
+      type="number"
+      required
+      [formControl]="count"
+    />
+    <mat-error *ngIf="count.invalid">{{ getErrorCountMessage() }}</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button
+    mat-button
+    [mat-dialog-close]="getDataModel()"
+    cdkFocusInitial
+    [disabled]="count.invalid"
+  >
+    Ok
+  </button>
+</div>
