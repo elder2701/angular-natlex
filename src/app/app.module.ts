@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ListModule } from './list/list.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -17,6 +18,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     DashboardModule,
+    ListModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

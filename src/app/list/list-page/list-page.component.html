@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="header">
+    <h2>List Page</h2>
+  </div>
+  <div class="content">
+    <app-single-selection-list
+      [data]="data"
+      class="list"
+      (getId)="(getIdToShowInfo($event))"
+    ></app-single-selection-list>
+    <app-list-item-info
+      class="info-card"
+      [img]="currentImg"
+      [info]="currentInfo"
+    ></app-list-item-info>
+  </div>
+</div>

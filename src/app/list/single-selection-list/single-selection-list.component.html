@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-selection-list
+    [multiple]="false"
+    (selectionChange)="getIdFromList($event)"
+    class="list"
+  >
+    <mat-list-option *ngFor="let item of data" [value]="item">
+      {{ (item.title | slice: 0:25 | titlecase) + " ..." }}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>
