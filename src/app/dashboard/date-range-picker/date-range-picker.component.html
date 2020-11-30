@@ -1,0 +1,20 @@
+<mat-form-field appearance="fill">
+  <mat-label>Select range</mat-label>
+  <mat-date-range-input
+    [formGroup]="range"
+    [rangePicker]="picker"
+    [min]="minDate"
+		[max]="maxDate"
+		disabled
+	>
+	<!--click on calendar icon is available only to change value of range-->
+    <input matStartDate placeholder="Start date" formControlName="start" />
+    <input
+      matEndDate
+      placeholder="End date"
+      formControlName="end"
+    />
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker (closed)="closedStreem()" disabled="false"></mat-date-range-picker>
+</mat-form-field>

@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="header">
+    <h2>Dashboard Chart</h2>
+    <button
+      mat-raised-button
+      color="primary"
+      class="btn"
+      [disabled]="this.data.length >= 4"
+      (click)="onClickAddChart()"
+    >
+      Add chart
+    </button>
+  </div>
+  <div class="dashboard-wrapper">
+    <mat-card *ngFor="let chart of data" class="dashboard-chart">
+      <app-chart
+        [name]="chart.name"
+        [unit]="chart.unit"
+        [data]="chart.series"
+        [startSeriesDate]="chart.startSeriesDate"
+        [endSeriesDate]="chart.endSeriesDate"
+        (closeChart)="onDeleteSeries($event)"
+      ></app-chart>
+    </mat-card>
+  </div>
+</div>
