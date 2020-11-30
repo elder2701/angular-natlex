@@ -1,0 +1,10 @@
+<mat-card [class]="(img&&info) ? 'card': 'empty-card'">
+  <p *ngIf="!(img && info); else infoContent">
+    Please select row of list to read more information
+  </p>
+
+  <ng-template #infoContent>
+      <img [src]="img" alt="test img" class="img" />
+      <p class="info">{{ info }}</p>
+  </ng-template>
+</mat-card>

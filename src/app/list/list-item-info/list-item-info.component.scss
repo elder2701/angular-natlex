@@ -1,0 +1,22 @@
+.img {
+  width: 50%;
+  height: 50%;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card, .empty-card {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.empty-card {
+  justify-content: center;
+}
