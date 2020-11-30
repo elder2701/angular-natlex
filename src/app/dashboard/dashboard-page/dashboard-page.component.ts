@@ -38,6 +38,6 @@ export class DashboardPageComponent {
   }
 
   onDeleteSeries($event: string): void {
-    this.data = this.dashBoardService.deleteSeries($event)
+    this.data = this.dashBoardService.deleteSeries($event);
   }
 }

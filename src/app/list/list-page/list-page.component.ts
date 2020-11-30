@@ -18,7 +18,7 @@ export class ListPageComponent implements OnInit {
     });
   }
 
-  getIdToShowInfo(obj: {title: string, url: string}): void {
+  getIdToShowInfo(obj: { title: string; url: string }): void {
     this.currentImg = obj.url;
     this.currentInfo = obj.title;
   }

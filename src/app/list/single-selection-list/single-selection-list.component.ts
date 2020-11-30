@@ -8,7 +8,7 @@ import { ListData } from '../list.sevice';
 })
 export class SingleSelectionListComponent {
   @Input() data: ListData[];
-  @Output() getId = new EventEmitter<{title: string, url: string}>();
+  @Output() getId = new EventEmitter<{ title: string; url: string }>();
 
   getIdFromList($event: any): void {
     const { title, url } = $event.options[0].value;
