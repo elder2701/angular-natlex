@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DashboardService, SensorsData } from '../dasboard.service';
 import { MatDialog } from '@angular/material/dialog';
 import {
@@ -11,7 +11,7 @@ import {
   templateUrl: './dashboard-page.component.html',
   styleUrls: ['./dashboard-page.component.scss'],
 })
-export class DashboardPageComponent {
+export class DashboardPageComponent implements OnInit {
   data: Array<SensorsData> = [];
   idxGenerate = 0; // index for generate unique chart id
 
@@ -19,6 +19,10 @@ export class DashboardPageComponent {
     private dashBoardService: DashboardService,
     public dialog: MatDialog
   ) {}
+
+  ngOnInit(): void {
+    this.data = this.dashBoardService.getData();
+  }
 
   onClickAddChart(): void {
     const dialogRef = this.dialog.open(CreateChartDialogComponent, {

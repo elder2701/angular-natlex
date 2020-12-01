@@ -85,4 +85,8 @@ export class DashboardService {
     return this.data;
   }
 
+  getData(): SensorsData[] {
+    return this.data;
+  }
+
 }
