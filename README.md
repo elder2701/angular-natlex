@@ -1,7 +1,7 @@
 # AngularNatlex
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
-It is test project for the position of a web-developer.
+It is test project for the web-developer position of [Natelx](https://natlex.team) company
 
 ## Running project
 
